@@ -10,6 +10,14 @@
       "StackName": "amplify-reactamplified-dev-104650",
       "StackId": "arn:aws:cloudformation:ap-northeast-2:253792668041:stack/amplify-reactamplified-dev-104650/54c9aff0-008f-11ec-8c92-022ca4540538",
       "AmplifyAppId": "d2zbu31gzwulc5"
+    },
+    "categories": {
+      "function": {
+        "testfunction": {
+          "deploymentBucketName": "amplify-reactamplified-dev-104650-deployment",
+          "s3Key": "amplify-builds/testfunction-4e457743716262726a43-build.zip"
+        }
+      }
     }
   }
 }
