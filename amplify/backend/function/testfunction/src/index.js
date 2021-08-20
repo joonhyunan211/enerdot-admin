@@ -2,6 +2,7 @@
 
 exports.handler = async (event) => {
     // TODO implement
+    const message = 'hello from Amplify API'
     const response = {
         statusCode: 200,
     //  Uncomment below to enable CORS requests
@@ -9,7 +10,10 @@ exports.handler = async (event) => {
     //      "Access-Control-Allow-Origin": "*",
     //      "Access-Control-Allow-Headers": "*"
     //  }, 
-        body: JSON.stringify('Hello from Lambda!'),
+        body: message,
+        headers:{
+            'Access-Control=-Allow-Origin':'*'
+        }
     };
     return response;
 };

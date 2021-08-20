@@ -15,7 +15,7 @@
       "function": {
         "testfunction": {
           "deploymentBucketName": "amplify-reactamplified-dev-104650-deployment",
-          "s3Key": "amplify-builds/testfunction-4e457743716262726a43-build.zip"
+          "s3Key": "amplify-builds/testfunction-49305a4450664b734954-build.zip"
         }
       }
     }

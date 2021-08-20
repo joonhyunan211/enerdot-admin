@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import './App.css';
-import Amplify  from 'aws-amplify'
+
 import { withStyles, createStyles, makeStyles } from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
@@ -9,9 +9,8 @@ import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
-import awsExports from "./aws-exports";
 import axios from "axios";
-Amplify.configure(awsExports);
+
 const StyledTableCell = withStyles((theme) =>
     createStyles({
         head: {
@@ -62,6 +61,7 @@ const App = () => {
 
     return (
         <div className="App">
+            <div className='title'>Enerdot Inverter Latest List </div>
             <input type='text' placeholder='Search here' onChange={(e) => {
                 setSearch(e.target.value)
             }}
