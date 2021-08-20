@@ -73,6 +73,21 @@ const App = () => {
                         <TableRow>
                             <StyledTableCell>id</StyledTableCell>
                             <StyledTableCell align="right">inverter_key</StyledTableCell>
+                            <StyledTableCell align="right">plant_id</StyledTableCell>
+                            <StyledTableCell align="right">plant_key</StyledTableCell>
+                            <StyledTableCell align="right">data_time_stamp</StyledTableCell>
+                            <StyledTableCell align="right">oper_status</StyledTableCell>
+                            <StyledTableCell align="right">power_total_ac</StyledTableCell>
+                            <StyledTableCell align="right">energy_today_total</StyledTableCell>
+                            <StyledTableCell align="right">energy_total</StyledTableCell>
+                            <StyledTableCell align="right">freq</StyledTableCell>
+                            <StyledTableCell align="right">voltage</StyledTableCell>
+                            <StyledTableCell align="right">current</StyledTableCell>
+                            <StyledTableCell align="right">err_info</StyledTableCell>
+                            <StyledTableCell align="right">created_at</StyledTableCell>
+                            <StyledTableCell align="right">created_by</StyledTableCell>
+                            <StyledTableCell align="right">modified_at</StyledTableCell>
+                            <StyledTableCell align="right">modified_by</StyledTableCell>
                         </TableRow>
                     </TableHead>
                     <TableBody>
@@ -89,6 +104,21 @@ const App = () => {
                                     {item.id}
                                 </StyledTableCell>
                                 <StyledTableCell align="right">{item.inverter_key}</StyledTableCell>
+                                <StyledTableCell align="right">{item.plant_id}</StyledTableCell>
+                                <StyledTableCell align="right">{item.plant_key}</StyledTableCell>
+                                <StyledTableCell align="right">{item.data_time_stamp}</StyledTableCell>
+                                <StyledTableCell align="right">{item.oper_status}</StyledTableCell>
+                                <StyledTableCell align="right">{item.power_total_ac}</StyledTableCell>
+                                <StyledTableCell align="right">{item.energy_today_total}</StyledTableCell>
+                                <StyledTableCell align="right">{item.energy_total}</StyledTableCell>
+                                <StyledTableCell align="right">{item.freq}</StyledTableCell>
+                                <StyledTableCell align="right">{item.voltage}</StyledTableCell>
+                                <StyledTableCell align="right">{item.current}</StyledTableCell>
+                                <StyledTableCell align="right">{item.err_info}</StyledTableCell>
+                                <StyledTableCell align="right">{item.created_at}</StyledTableCell>
+                                <StyledTableCell align="right">{item.created_by}</StyledTableCell>
+                                <StyledTableCell align="right">{item.modified_at}</StyledTableCell>
+                                <StyledTableCell align="right">{item.modified_by}</StyledTableCell>
                             </StyledTableRow>);
                         })}
                     </TableBody>
