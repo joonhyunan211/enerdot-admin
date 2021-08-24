@@ -48,9 +48,25 @@ const App = () => {
 
     const getInverterData = async () => {
         try {
-            const data = await axios.get('redi.cwsjecoahxwm.ap-northeast-2.rds.amazonaws.com');
-            console.log(data.data)
-            setProduct(data.data)
+            const {data : apiData = []} = await axios.get('http://localhost:10001/inveter/list');
+            console.log(apiData)
+            const result = apiData?.map((res=>{
+                return {
+                    ...res,
+                    err_info : JSON.stringify(res.err_info)
+                }
+            }))
+            setProduct(result)
+
+            // const {data : apiData2 = []} = await axios.get('http://localhost:10001/inveter/list');
+            // console.log(apiData2)
+            // const result2 = apiData2?.map((res=>{
+            //     return {
+            //         ...res,
+            //         err_info : JSON.stringify(res.err_info)
+            //     }
+            // }))
+            // setProduct(result2)
         } catch (e) {
             console.log(e)
         }
