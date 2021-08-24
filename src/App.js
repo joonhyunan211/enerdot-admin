@@ -48,7 +48,7 @@ const App = () => {
 
     const getInverterData = async () => {
         try {
-            const data = await axios.get('http://localhost:3000/inveter/list');
+            const data = await axios.get('redi.cwsjecoahxwm.ap-northeast-2.rds.amazonaws.com');
             console.log(data.data)
             setProduct(data.data)
         } catch (e) {
