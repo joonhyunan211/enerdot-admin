@@ -48,7 +48,7 @@ const App = () => {
 
     const getInverterData = async () => {
         try {
-            const {data : apiData = []} = await axios.get('https://3.34.191.62:10001/inverter-latest');
+            const {data : apiData = []} = await axios.get('3.34.191.62:10001/inverter-latest');
             console.log(apiData)
             const result = apiData?.map((res=>{
                 return {
