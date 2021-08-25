@@ -48,12 +48,12 @@ const App = () => {
 
     const getInverterData = async () => {
         try {
-            const {data : apiData = []} = await axios.get('http://localhost:10001/inveter/list');
+            const {data : apiData = []} = await axios.get('http://3.34.191.62:10001/inverter-latest');
             console.log(apiData)
             const result = apiData?.map((res=>{
                 return {
                     ...res,
-                    err_info : JSON.stringify(res.err_info)
+                    errInfo : JSON.stringify(res.errInfo)
                 }
             }))
             setProduct(result)
@@ -119,22 +119,22 @@ const App = () => {
                                 <StyledTableCell component="th" scope="row">
                                     {item.id}
                                 </StyledTableCell>
-                                <StyledTableCell align="right">{item.inverter_key}</StyledTableCell>
-                                <StyledTableCell align="right">{item.plant_id}</StyledTableCell>
-                                <StyledTableCell align="right">{item.plant_key}</StyledTableCell>
-                                <StyledTableCell align="right">{item.data_time_stamp}</StyledTableCell>
-                                <StyledTableCell align="right">{item.oper_status}</StyledTableCell>
-                                <StyledTableCell align="right">{item.power_total_ac}</StyledTableCell>
-                                <StyledTableCell align="right">{item.energy_today_total}</StyledTableCell>
-                                <StyledTableCell align="right">{item.energy_total}</StyledTableCell>
+                                <StyledTableCell align="right">{item.inverterKey}</StyledTableCell>
+                                <StyledTableCell align="right">{item.plantId}</StyledTableCell>
+                                <StyledTableCell align="right">{item.plantKey}</StyledTableCell>
+                                <StyledTableCell align="right">{item.dataTimeStamp}</StyledTableCell>
+                                <StyledTableCell align="right">{item.operStatus}</StyledTableCell>
+                                <StyledTableCell align="right">{item.powerTotalAc}</StyledTableCell>
+                                <StyledTableCell align="right">{item.energyTodayTotal}</StyledTableCell>
+                                <StyledTableCell align="right">{item.energyTotal}</StyledTableCell>
                                 <StyledTableCell align="right">{item.freq}</StyledTableCell>
                                 <StyledTableCell align="right">{item.voltage}</StyledTableCell>
                                 <StyledTableCell align="right">{item.current}</StyledTableCell>
-                                <StyledTableCell align="right">{item.err_info}</StyledTableCell>
-                                <StyledTableCell align="right">{item.created_at}</StyledTableCell>
-                                <StyledTableCell align="right">{item.created_by}</StyledTableCell>
-                                <StyledTableCell align="right">{item.modified_at}</StyledTableCell>
-                                <StyledTableCell align="right">{item.modified_by}</StyledTableCell>
+                                <StyledTableCell align="right">{item.errInfo}</StyledTableCell>
+                                <StyledTableCell align="right">{item.createdAt}</StyledTableCell>
+                                <StyledTableCell align="right">{item.createdBy}</StyledTableCell>
+                                <StyledTableCell align="right">{item.modifiedAt}</StyledTableCell>
+                                <StyledTableCell align="right">{item.modifiedBy}</StyledTableCell>
                             </StyledTableRow>);
                         })}
                     </TableBody>
