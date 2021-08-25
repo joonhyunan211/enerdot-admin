@@ -110,7 +110,7 @@ const App = () => {
                         {product.filter((item) => {
                             if (search === ''){
                                 return item;
-                            } else if (item.inverter_key.toLowerCase().includes(search.toLowerCase())){
+                            } else if (item.inverterKey.toLowerCase().includes(search.toLowerCase())){
                                 return item;
                             }
                             return false;
