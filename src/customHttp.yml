@@ -1,0 +1,18 @@
+# Custom Headers must be nested inside a top-level customHeaders key
+
+{
+    "Version": "2012-10-17",
+    "Statement": {
+        "Effect": "Deny",
+        "Action": "*",
+        "Resource": "*",
+        "Condition": {
+            "NotIpAddress": {
+                "aws:SourceIp": [
+                    "10.10.0.122"
+                ]
+            },
+            "Bool": {"aws:ViaAWSService": "false"}
+        }
+    }
+}

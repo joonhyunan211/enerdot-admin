@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
+import {Admin} from "react-admin";
 import './App.css';
-
 import { withStyles, createStyles, makeStyles } from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
